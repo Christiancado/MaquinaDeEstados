@@ -49,6 +49,7 @@
      <Compile Include="Assets\Prefabs\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Prefabs\WeaponsAndBullets\DestoyBullet.cs" />
      <Compile Include="Assets\Scripts\IFSM\AIstate.cs" />
+     <Compile Include="Assets\Scripts\IFSM\Control\ShootingControl.cs" />
      <Compile Include="Assets\Scripts\IFSM\FiniteStateMachine.cs" />
      <Compile Include="Assets\Scripts\IFSM\IFSMcontext.cs" />
      <Compile Include="Assets\Scripts\IFSM\State.cs" />
@@ -56,8 +57,9 @@
      <Compile Include="Assets\Scripts\IFSM\States\ChasingAndAttaking.cs" />
      <Compile Include="Assets\Scripts\IFSM\States\FollowPath.cs" />
      <Compile Include="Assets\Scripts\IFSM\Triggers\Ear.cs" />
+     <Compile Include="Assets\Scripts\IFSM\Triggers\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\IFSM\Triggers\EnemySight.cs" />
-     <Compile Include="Assets\Scripts\IFSM\Triggers\PlayerLife.cs" />
+     <Compile Include="Assets\Scripts\IFSM\Triggers\PlayerHealth.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
