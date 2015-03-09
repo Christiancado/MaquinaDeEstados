@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Timers;
 
+
 public class ChasingAndAttaking: State {
     GameObject bullet;
     bool shooting = true;
@@ -19,14 +20,10 @@ public class ChasingAndAttaking: State {
         float distance = Vector3.Distance(context.player.position, context.enemy.position);
         if(distance > 4 && distance < 20)
         {
+            /*I stop the previous animation and then play once one that leave the gameobject in it's original position*/
             anim.Stop();
             anim.Play("StayStill");
             context.navAgent.SetDestination(context.player.position);
-          
-            RaycastHit hit;
-            Physics.Raycast(context.player.position,
-            (context.enemy.position - context.player.position).normalized,
-            out hit);
 
             if(shooting)
             {

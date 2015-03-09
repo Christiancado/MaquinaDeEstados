@@ -17,12 +17,11 @@ public class FollowPath : State {
         if(distance > 2)
         {
             
-            Debug.Log("POR AQUI DEBE DE PASAR!!!");
+           
             context.navAgent.SetDestination(context.enemyPath[i].position);
         }
         else if(i < context.enemyPath.Length - 1 )
         {
-            Debug.Log(i);
             /*The increment happens before the operation. BE CAREFUL!!!!*/
             context.navAgent.SetDestination(context.enemyPath[++i].position);
         }

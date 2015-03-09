@@ -95,7 +95,6 @@ public class FiniteStateMachine : MonoBehaviour, IFSMcontext {
     {
 
         string[] stateIds = Enum.GetNames(typeof(AIstate));
-        Debug.Log("Primer Paso");
         states = new List<State>();
         for (int i = 0; i < stateIds.Length; i++)
         {

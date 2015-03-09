@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Prefabs\WeaponsAndBullets\DestoyBullet.cs" />
+     <Compile Include="Assets\Prefabs\BACKUP\CharacterControlScripts\MouseLook.cs" />
+     <Compile Include="Assets\Prefabs\BACKUP\WeaponsAndBullets\DestoyBullet.cs" />
      <Compile Include="Assets\Scripts\IFSM\AIstate.cs" />
      <Compile Include="Assets\Scripts\IFSM\Control\ShootingControl.cs" />
      <Compile Include="Assets\Scripts\IFSM\FiniteStateMachine.cs" />

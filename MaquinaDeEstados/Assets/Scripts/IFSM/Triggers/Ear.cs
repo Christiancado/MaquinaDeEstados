@@ -8,23 +8,15 @@ public class Ear : MonoBehaviour {
     [SerializeField]
     private FiniteStateMachine fsm;
 
-
+    /*In ear's case I only use the collider.tag so in concept the enemy can always hear the player in another room*/
     void OnTriggerStay(Collider coll)
     {
 
         if (coll.tag == fsm.player.tag)
         {
-            /*I use two conditionals so I don't have to throw the ray-cast if it isn't needed*/
-            NavMeshHit hit;
-            blocked = fsm.navAgent.Raycast(fsm.player.position, out hit);
-            Debug.DrawLine(fsm.enemy.position, fsm.player.position, blocked ? Color.red : Color.green);
-            if (!blocked)
-            {
                 /*We prepare the boolean "playerLastPosition" to make sure that it will react correctly in the State ChaseToLastPointSeen*/
                 fsm.playerLastPosition = true;
-
                 fsm.ChasingAndAttacking();
-            }
 
         }
         else if (coll.tag == fsm.player.tag)
@@ -38,13 +30,8 @@ public class Ear : MonoBehaviour {
 
         if (coll.tag == fsm.player.tag)
         {
-            NavMeshHit hit;
-            blocked = fsm.navAgent.Raycast(fsm.player.position, out hit);
-            Debug.DrawLine(fsm.enemy.position, fsm.player.position, blocked ? Color.red : Color.green);
-            if (!blocked)
-            {
+           
                 fsm.LastPointSeen();
-            }
         }
     }
 }
